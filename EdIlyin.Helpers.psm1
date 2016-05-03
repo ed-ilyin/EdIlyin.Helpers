@@ -8,7 +8,7 @@ function Get-EihHelp {
         $Command = $Command.ResolvedCommand
     }
     else {
-        $Alias = "$(gal -def $Name)"
+        $Alias = "$(gal -def $Name -ea SilentlyContinue)"
     }
     [pscustomobject]@{
         Alias = $Alias
